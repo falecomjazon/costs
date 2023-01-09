@@ -6,6 +6,7 @@ import Message from "../layout/Message"
 import { useLocation } from "react-router-dom"
 import styles from "./Projetos.module.css"
 import Container from "../layout/Container"
+import LinkButton from "../layout/LinkButton"
 function Projetos() {
 
     const location = useLocation()
@@ -16,11 +17,12 @@ function Projetos() {
         message = location.state.message
     }
     return (
-        <div>
+        <div className={styles.project_container}>
             <NavBar/> 
-            <div>
+            <div className={styles.title_container}>
                 <h1>Meus projetos</h1>
-                <a href="#">novo projeto</a>
+                <LinkButton to="/novoprojeto" text="Novo Projeto"/>
+                
             </div>
           {/*   <section className={styles.home_container}>
                 <h1>Meus projetos</h1>
